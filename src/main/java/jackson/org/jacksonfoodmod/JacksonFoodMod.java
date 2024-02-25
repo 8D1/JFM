@@ -14,7 +14,7 @@ public class JacksonFoodMod {
     private static final DeferredRegister<Item> ITEMS;
     public static final RegistryObject<Item> ITEM_CH_MILK;
     public static final RegistryObject<Item> ITEM_MC_CH;
-
+    public static final RegistryObject<Item> ITEM_LASAGNA;
     public JacksonFoodMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modEventBus);
@@ -24,9 +24,12 @@ public class JacksonFoodMod {
     private void registerItems() {
     }
 
+
+
     static {
         ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "jacksonfoodmod");
         ITEM_CH_MILK = ITEMS.register("itemchmilk", itemChMilk::new);
         ITEM_MC_CH = ITEMS.register("itemmcch", itemMcCh::new);
+        ITEM_LASAGNA = ITEMS.register("itemlasagna", itemLasagna::new);
     }
 }

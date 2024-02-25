@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public class itemLasagna extends Item {
     public itemLasagna() {
         super(new Item.Properties()
-                .food(new FoodProperties.Builder().nutrition(6).saturationMod(0.6f).build())
+                .food(new FoodProperties.Builder().nutrition(11).saturationMod(0.6f).build())
                 .stacksTo(16));
     }
 
@@ -22,7 +22,8 @@ public class itemLasagna extends Item {
         super.finishUsingItem(stack, world, entityLiving);
         if (!world.isClientSide && entityLiving instanceof Player) {
             Player player = (Player) entityLiving;
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 3)); // 30 seconds of Jump Boost I
+            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 600, 1)); // 30 seconds of Jump Boost I
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600, 2)); // 30 seconds of Jump Boost I
         }
         return stack;
     }

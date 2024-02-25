@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "RRR",
+    "EDE"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "R": {
+      "item": "minecraft:red_dye"
+    },
+    "D": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "item": "jacksonfoodmod:itemlasagna",
+    "count": 1
+  }
+}

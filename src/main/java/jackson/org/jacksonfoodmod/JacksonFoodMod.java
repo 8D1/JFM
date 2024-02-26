@@ -15,6 +15,7 @@ public class JacksonFoodMod {
     public static final RegistryObject<Item> ITEM_CH_MILK;
     public static final RegistryObject<Item> ITEM_MC_CH;
     public static final RegistryObject<Item> ITEM_LASAGNA;
+    public static final RegistryObject<Item> ITEM_EDIBLE;
     public JacksonFoodMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modEventBus);
@@ -31,5 +32,6 @@ public class JacksonFoodMod {
         ITEM_CH_MILK = ITEMS.register("itemchmilk", itemChMilk::new);
         ITEM_MC_CH = ITEMS.register("itemmcch", itemMcCh::new);
         ITEM_LASAGNA = ITEMS.register("itemlasagna", itemLasagna::new);
+        ITEM_EDIBLE = ITEMS.register("itemedible", itemEdible::new);
     }
 }
